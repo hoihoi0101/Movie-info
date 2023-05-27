@@ -9,10 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <h1>영화 정보</h1>
-        <img src="image url" alt="logo" class="logo">
-    </header>
+    <div id="headers"></div>    
     <div class="container">
         <div class="movie-info">
             <img src="image url">
@@ -179,6 +176,51 @@
 
         displayReviews();
     });
+</script>
+
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">   
+
+$(document).ready( function() {
+
+$("#headers").load("header.html"); 
+$("#footers").load("footer.html"); 
+$("#side").load("side.html"); 
+$("#contents").load("contents-now.html"); 
+$("#slide").load("slide.html"); 
+});
+
+$(document).ready(function() {
+      function changePage1() {
+        $("#contents").load("contents-now.html");
+        var newContent = '현재 상영작';
+        $('#category-name').html(newContent);
+      }
+      
+      
+      $('#now').click(function() {
+        changePage1();
+      });
+
+      
+    });
+
+$(document).ready(function() {
+      function changePage2() {
+        $("#contents").load("contents-future.html");
+        var newContent = '개봉 예정작';
+        $('#category-name').html(newContent);
+      }
+      
+      
+      $('#future').click(function() {
+        changePage2();
+      });
+
+      
+    });    
+
+    
 </script>
 
 </html>
