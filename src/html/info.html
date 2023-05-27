@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>영화 기본 정보페이지</title>
+    <link rel="stylesheet" href="../css/infostyle.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    </head>
+
+
+<body>
+    <header>
+        <h1>영화 정보</h1>
+        <img src="image url" alt="logo" class="logo">
+    </header>
+    <div class="container">
+        <div class="movie-info">
+            <img src="image url">
+            <div class="movie-info-content">
+                <h2>기본 정보</h2>
+                <p>제목: <span>영화 제목 작성</span></p>
+                <p>개봉 일자: <span>YYYY-MM-DD</span></p>
+                <p>장르: <span>장르 작성</span></p>
+                <p>러닝 타임: <span>런닝 타임 작성</span></p>
+            </div>
+        </div>
+        <div class="movie-info">
+            <div class="reserv">
+                <p>예약하러 가기 ➜ &nbsp;  </p>
+            </div>
+            <div class="button-row">
+                <a href="http://www.cgv.co.kr/ticket/" target="_blank" class="brand-button">CGV</a> &nbsp; 
+                <a href="https://www.megabox.co.kr/booking" target="_blank" class="brand-button">메가박스</a> &nbsp; 
+                <a href="https://www.lottecinema.co.kr/NLCHS/Ticketing" target="_blank" class="brand-button">롯데시네마</a> &nbsp; 
+            </div>
+        </div>
+
+        <div class="movie-info">
+            <div class="movie-info-content">
+                <h2>감독/출연</h2>
+                <p>감독: <span>감독 작성</span></p>
+                <ul>
+                    <li><span>배우 1</span></li>
+                    <li><span>배우 2</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="movie-info">
+            <div class="movie-info-content">
+                <h2>평점</h2>
+                <p>IMDb: <span>IMDb 평점 작성</span></p>
+                <p>Rotten Tomatoes: <span>로튼 토마토 평점 작성</span></p>
+                <p>Metacritic: <span>메타크리틱 평점 작성</span></p>
+            </div>
+        </div>
+        <!-- 리뷰 섹션 -->
+        <div class="review-section">
+            <h2>리뷰</h2>
+            <ul class="review-list">
+                <li class="review-item">
+                    <div class="name">이름1</div>
+                    <div>★★★★☆</div>
+                    <div>리뷰 내용1</div>
+                </li><br>
+                <li class="review-item">
+                    <div class="name">이름2</div>
+                    <div>★★★☆☆</div>
+                    <div>리뷰 내용2</div>
+                </li><br>
+            </ul>
+            <div class="comment-input">
+                <div class="comment-input-container">
+                    <br><div>이름</div>
+                    <input type="text" class="name-input" placeholder="이름을 입력하세요.">
+                </div>
+                <div>별점</div>
+                <select class="rating-input">
+                    <option value="">별점 선택</option>
+                    <option value="★">★</option>
+                    <option value="★★">★★</option>
+                    <option value="★★★">★★★</option>
+                    <option value="★★★★">★★★★</option>
+                    <option value="★★★★★">★★★★★</option>
+                </select>
+                <textarea placeholder="어떤 소감을 느끼셨나요?"></textarea>
+                <button class="save-review-button">작성</button>
+            </div>
+        </div>
+        <!-- 리뷰 섹션 끝 -->
+    </div>
+    <button id="scroll-to-top-button" title="맨 위로 이동" onclick="scrollToTop()">^</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+<script>
+    //스크롤------------------------------------------
+    $(document).ready(function () {
+        function scrollToTop() {
+            $('html, body').animate({scrollTop: 0}, 'smooth');
+        }
+
+        $(window).scroll(function () {
+            const scrollPosition = $(this).scrollTop();
+            const scrollToTopButton = $("#scroll-to-top-button");
+
+            if (scrollPosition > 200) {
+                scrollToTopButton.show();
+            } else {
+                scrollToTopButton.hide();
+            }
+        });
+
+        $("#scroll-to-top-button").click(function () {
+            scrollToTop();
+        });
+
+
+        // 리뷰 저장 ----------------------------------------------
+        function saveReviewsToLocal(reviews) {
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+        }
+
+        function getReviewsFromLocal() {
+            const storedReviews = localStorage.getItem('reviews');
+            return storedReviews ? JSON.parse(storedReviews) : [];
+        }
+
+        function createReviewItem(name, ratingStars, content) {
+            return $("<li>", {class: "review-item"})
+                .append($("<div>", {class: "name", text: name}))
+                .append($("<div>", {text: ratingStars}))
+                .append($("<div>", {html: content}))
+                .append("<br>");
+        }
+
+        function displayReviews() {
+            const reviewList = $(".review-list");
+            reviewList.empty();
+            const storedReviews = getReviewsFromLocal();
+
+            storedReviews.forEach(function (review) {
+                const newReview = createReviewItem(review.name, review.ratingStars, review.content);
+                reviewList.append(newReview);
+            });
+        }
+
+        function addReview(name, ratingStars, content) {
+            const storedReviews = getReviewsFromLocal();
+            storedReviews.push({name, ratingStars, content});
+            saveReviewsToLocal(storedReviews);
+            displayReviews();
+        }
+
+        $(".save-review-button").click(function () {
+            const nameInput = $(".name-input");
+            const ratingSelect = $(".rating-input");
+            const contentTextarea = $("textarea");
+
+            const name = nameInput.val();
+            const ratingStars = ratingSelect.val();
+            const content = contentTextarea.val();
+
+            if (name) {
+                if (ratingStars) {
+                    addReview(name, ratingStars, content);
+                    nameInput.val('');
+                    ratingSelect.val('');
+                    contentTextarea.val('');
+                } else {
+                    alert('별점을 선택하세요.');
+                }
+            } else {
+                alert('이름을 입력하세요.');
+            }
+        });
+
+        displayReviews();
+    });
+</script>
+</html>
