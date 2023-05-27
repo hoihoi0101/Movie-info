@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("header.html"); 
+$("#footers").load("footer.html"); 
+$("#slide").load("slide.html"); 
+});
+
+</script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +17,13 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="headers"></div>
     
+    <main>
+        <div id="slide"></div>
+    </main>
+
+    <div id="footers"></div>
+
 </body>
 </html>
