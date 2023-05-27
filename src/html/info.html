@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="headers"></div>    
+    <div id="headers"></div>
     <div class="container">
         <div class="movie-info">
             <img src="image url">
@@ -96,8 +96,30 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function () {
-        const checkboxes = Array.from(document.querySelectorAll('.rating input[type="checkbox"]'));
 
+        // 스크롤 관련 -----------------------------------------------------------------
+        function scrollToTop() {
+            $('html, body').animate({scrollTop: 0}, 'smooth');
+        }
+
+        $(window).scroll(function () {
+            const scrollPosition = $(this).scrollTop();
+            const scrollToTopButton = $("#scroll-to-top-button");
+
+            if (scrollPosition > 200) {
+                scrollToTopButton.show();
+            } else {
+                scrollToTopButton.hide();
+            }
+        });
+
+        $("#scroll-to-top-button").click(function () {
+            scrollToTop();
+        });
+
+
+        // 체크박스 정의
+        const checkboxes = Array.from(document.querySelectorAll('.rating input[type="checkbox"]'));
         function updateRating() {
             const selectedCheckbox = checkboxes.find((checkbox) => checkbox.checked);
             let selectedIndex = selectedCheckbox ? checkboxes.indexOf(selectedCheckbox) : -1;
@@ -109,6 +131,7 @@
             }
         }
 
+        // 체크박스 받아오기
         checkboxes.forEach((checkbox) => {
             checkbox.addEventListener('click', () => {
                 updateRating();
@@ -178,49 +201,50 @@
     });
 </script>
 
+
 <script src="../js/jquery-3.7.0.min.js"></script>
-<script type="text/javascript">   
+<script type="text/javascript">
 
-$(document).ready( function() {
+    $(document).ready(function () {
 
-$("#headers").load("header.html"); 
-$("#footers").load("footer.html"); 
-$("#side").load("side.html"); 
-$("#contents").load("contents-now.html"); 
-$("#slide").load("slide.html"); 
-});
-
-$(document).ready(function() {
-      function changePage1() {
+        $("#headers").load("header.html");
+        $("#footers").load("footer.html");
+        $("#side").load("side.html");
         $("#contents").load("contents-now.html");
-        var newContent = '현재 상영작';
-        $('#category-name').html(newContent);
-      }
-      
-      
-      $('#now').click(function() {
-        changePage1();
-      });
-
-      
+        $("#slide").load("slide.html");
     });
 
-$(document).ready(function() {
-      function changePage2() {
-        $("#contents").load("contents-future.html");
-        var newContent = '개봉 예정작';
-        $('#category-name').html(newContent);
-      }
-      
-      
-      $('#future').click(function() {
-        changePage2();
-      });
+    $(document).ready(function () {
+        function changePage1() {
+            $("#contents").load("contents-now.html");
+            var newContent = '현재 상영작';
+            $('#category-name').html(newContent);
+        }
 
-      
-    });    
 
-    
+        $('#now').click(function () {
+            changePage1();
+        });
+
+
+    });
+
+    $(document).ready(function () {
+        function changePage2() {
+            $("#contents").load("contents-future.html");
+            var newContent = '개봉 예정작';
+            $('#category-name').html(newContent);
+        }
+
+
+        $('#future').click(function () {
+            changePage2();
+        });
+
+
+    });
+
+
 </script>
 
 </html>
