@@ -3,17 +3,56 @@
 <head>
   <meta charset="utf-8">
   <title>google map</title>
-  <script type="text/javascript" src="map.js"></script>
-  <style>
-    /* 맵 컨테이너의 크기를 조정 */
-    #map {
-      height: 400px;
-      width: 100%;
-    }
-  </style>
+  <script type="text/javascript" src="../js/map.js"></script>
+  <link rel="stylesheet" href="../css/map.css">
 </head>
+<div id="headers"></div>
 <body>
-  <h1>영화관 위치</h1>
   <div id="map"></div>
 </body>
 </html>
+
+<script src="../js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">   
+
+$(document).ready( function() {
+
+$("#headers").load("header.html"); 
+$("#footers").load("footer.html"); 
+$("#side").load("side.html"); 
+$("#contents").load("contents-now.html"); 
+$("#slide").load("slide.html"); 
+});
+
+$(document).ready(function() {
+      function changePage1() {
+        $("#contents").load("contents-now.html");
+        var newContent = '현재 상영작';
+        $('#category-name').html(newContent);
+      }
+      
+      
+      $('#now').click(function() {
+        changePage1();
+      });
+
+      
+    });
+
+$(document).ready(function() {
+      function changePage2() {
+        $("#contents").load("contents-future.html");
+        var newContent = '개봉 예정작';
+        $('#category-name').html(newContent);
+      }
+      
+      
+      $('#future').click(function() {
+        changePage2();
+      });
+
+      
+    });    
+
+    
+</script>
