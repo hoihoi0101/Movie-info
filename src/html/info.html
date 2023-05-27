@@ -6,8 +6,7 @@
     <title>영화 기본 정보페이지</title>
     <link rel="stylesheet" href="../css/infostyle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    </head>
-
+</head>
 
 <body>
     <header>
@@ -27,12 +26,13 @@
         </div>
         <div class="movie-info">
             <div class="reserv">
-                <p>예약하러 가기 ➜ &nbsp;  </p>
+                <p>예약하러 가기 ➜ &nbsp; </p>
             </div>
             <div class="button-row">
-                <a href="http://www.cgv.co.kr/ticket/" target="_blank" class="brand-button">CGV</a> &nbsp; 
-                <a href="https://www.megabox.co.kr/booking" target="_blank" class="brand-button">메가박스</a> &nbsp; 
-                <a href="https://www.lottecinema.co.kr/NLCHS/Ticketing" target="_blank" class="brand-button">롯데시네마</a> &nbsp; 
+                <a href="http://www.cgv.co.kr/ticket/" target="_blank" class="brand-button">CGV</a> &nbsp;
+                <a href="https://www.megabox.co.kr/booking" target="_blank" class="brand-button">메가박스</a> &nbsp;
+                <a href="https://www.lottecinema.co.kr/NLCHS/Ticketing" target="_blank" class="brand-button">롯데시네마</a>
+                &nbsp;
             </div>
         </div>
 
@@ -71,18 +71,23 @@
             </ul>
             <div class="comment-input">
                 <div class="comment-input-container">
-                    <br><div>이름</div>
+                    <br>
+                    <div>이름</div>
                     <input type="text" class="name-input" placeholder="이름을 입력하세요.">
                 </div>
                 <div>별점</div>
-                <select class="rating-input">
-                    <option value="">별점 선택</option>
-                    <option value="★">★</option>
-                    <option value="★★">★★</option>
-                    <option value="★★★">★★★</option>
-                    <option value="★★★★">★★★★</option>
-                    <option value="★★★★★">★★★★★</option>
-                </select>
+                <div class="rating">
+                    <input type="checkbox" class="star" id="star-1" value="1">
+                    <label for="star-1"></label>
+                    <input type="checkbox" class="star" id="star-2" value="2">
+                    <label for="star-2"></label>
+                    <input type="checkbox" class="star" id="star-3" value="3">
+                    <label for="star-3"></label>
+                    <input type="checkbox" class="star" id="star-4" value="4">
+                    <label for="star-4"></label>
+                    <input type="checkbox" class="star" id="star-5" value="5">
+                    <label for="star-5"></label>
+                </div>
                 <textarea placeholder="어떤 소감을 느끼셨나요?"></textarea>
                 <button class="save-review-button">작성</button>
             </div>
@@ -93,27 +98,25 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 <script>
-    //스크롤------------------------------------------
     $(document).ready(function () {
-        function scrollToTop() {
-            $('html, body').animate({scrollTop: 0}, 'smooth');
+        const checkboxes = Array.from(document.querySelectorAll('.rating input[type="checkbox"]'));
+
+        function updateRating() {
+            const selectedCheckbox = checkboxes.find((checkbox) => checkbox.checked);
+            let selectedIndex = selectedCheckbox ? checkboxes.indexOf(selectedCheckbox) : -1;
+
+            if (selectedIndex >= 0) {
+                checkboxes.forEach((checkbox, i) => {
+                    checkbox.checked = i <= selectedIndex;
+                });
+            }
         }
 
-        $(window).scroll(function () {
-            const scrollPosition = $(this).scrollTop();
-            const scrollToTopButton = $("#scroll-to-top-button");
-
-            if (scrollPosition > 200) {
-                scrollToTopButton.show();
-            } else {
-                scrollToTopButton.hide();
-            }
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('click', () => {
+                updateRating();
+            });
         });
-
-        $("#scroll-to-top-button").click(function () {
-            scrollToTop();
-        });
-
 
         // 리뷰 저장 ----------------------------------------------
         function saveReviewsToLocal(reviews) {
@@ -126,11 +129,11 @@
         }
 
         function createReviewItem(name, ratingStars, content) {
-            return $("<li>", {class: "review-item"})
-                .append($("<div>", {class: "name", text: name}))
-                .append($("<div>", {text: ratingStars}))
-                .append($("<div>", {html: content}))
-                .append("<br>");
+            return $("<li>", { class: "review-item" })
+                .append($("<div>", { class: "name", text: name }))
+                .append($("<div>", { text: "★".repeat(ratingStars) })) // 별점
+                .append($("<div>", { html: content }))
+                .append($("<br>")); // 여기 수정
         }
 
         function displayReviews() {
@@ -139,32 +142,32 @@
             const storedReviews = getReviewsFromLocal();
 
             storedReviews.forEach(function (review) {
-                const newReview = createReviewItem(review.name, review.ratingStars, review.content);
+                const newReview = createReviewItem(review.name, review.ratingStars, review.content); // 여기 수정
                 reviewList.append(newReview);
             });
         }
 
-        function addReview(name, ratingStars, content) {
+        function addReview(name, ratingIndex, content) {
             const storedReviews = getReviewsFromLocal();
-            storedReviews.push({name, ratingStars, content});
+            const ratingStars = ratingIndex ; // 여기 수정
+            storedReviews.push({ name, ratingStars, content });
             saveReviewsToLocal(storedReviews);
             displayReviews();
         }
 
         $(".save-review-button").click(function () {
             const nameInput = $(".name-input");
-            const ratingSelect = $(".rating-input");
+            const ratingIndex = checkboxes.filter((el) => el.checked).length;
             const contentTextarea = $("textarea");
 
             const name = nameInput.val();
-            const ratingStars = ratingSelect.val();
             const content = contentTextarea.val();
 
             if (name) {
-                if (ratingStars) {
-                    addReview(name, ratingStars, content);
+                if (ratingIndex >= 0) {
+                    addReview(name, ratingIndex, content);
                     nameInput.val('');
-                    ratingSelect.val('');
+                    checkboxes.forEach((checkbox) => { checkbox.checked = false; });
                     contentTextarea.val('');
                 } else {
                     alert('별점을 선택하세요.');
@@ -177,4 +180,5 @@
         displayReviews();
     });
 </script>
+
 </html>
