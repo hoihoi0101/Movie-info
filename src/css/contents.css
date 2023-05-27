@@ -44,8 +44,8 @@ hr{
     width: 150px;
     height: 250px;
     object-fit: cover;
-    box-shadow: 0px 1px 7px 2px #616267;
-    border-bottom: 1px solid #7b7d80;
+        box-shadow: 0px 1px 7px 2px #616267;
+        border-bottom: 1px solid #7b7d80;
 }
 
 
@@ -57,19 +57,21 @@ hr{
 }
 
 .movie-name-main{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .movie-grade{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .audience-value{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 
 .movie-contents{
-    
+    margin-right: 10%;
 
 }
