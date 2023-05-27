@@ -22,6 +22,8 @@ p {
 }
 
 .movie-img {
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 45px;
     height: 60px;
     margin-left: 16px;
@@ -36,3 +38,6 @@ p {
     font-weight: bold;
   }
 
+  .topic{
+    margin-left: 13%;
+  }
