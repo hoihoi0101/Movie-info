@@ -1,7 +1,38 @@
 h2 {
-    margin: 10% 0;
+    margin-left: 16px;
 }
 
 li{
     margin: 5% 0;
 }
+
+p {
+    margin-left: 10%;
+}
+
+.movie{
+    margin-left: 10%;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 1px 7px 2px #c7c9d3;
+    border-bottom: 1px solid #dcddde
+}
+
+.movie-img {
+    width: 45px;
+    height: 60px;
+    margin-left: 16px;
+    margin-right: 16px;
+    box-shadow: 0px 1px 7px 2px #c7c9d3;
+    border-bottom: 1px solid #dcddde
+    
+  }
+
+  .movie-name {
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+

@@ -1,0 +1,76 @@
+.category{
+    margin-left: 1100px;
+}
+
+hr{
+    margin-top: 10px;
+    width: 1400px;
+}
+
+
+#now{
+    margin-right: 10px;
+}
+
+#future:hover{
+    font-weight: bold;
+}
+
+#now:hover{
+    font-weight: bold;
+}
+
+.movies{
+    width: 1400px   ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.movie-card{
+    display: flex;
+    height: 300px;
+    width: 550px;
+    margin: 5%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 1px 7px 2px #c7c9d3;
+    border-bottom: 1px solid #dcddde
+}
+
+.movie-img-main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0px 1px 7px 2px #616267;
+    border-bottom: 1px solid #7b7d80;
+}
+
+
+
+
+.movie-text{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.movie-name-main{
+    margin-bottom: 10px;
+}
+
+.movie-grade{
+    margin-bottom: 10px;
+}
+
+.audience-value{
+    margin-bottom: 10px;
+}
+
+
+.movie-contents{
+    
+
+}

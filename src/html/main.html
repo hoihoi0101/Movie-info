@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
 <script src="../js/jquery-3.7.0.min.js"></script>
 <script type="text/javascript">   
 $(document).ready( function() {
@@ -7,9 +8,41 @@ $(document).ready( function() {
 $("#headers").load("header.html"); 
 $("#footers").load("footer.html"); 
 $("#side").load("side.html"); 
+$("#contents").load("contents-now.html"); 
 $("#slide").load("slide.html"); 
 });
 
+$(document).ready(function() {
+      function changePage1() {
+        $("#contents").load("contents-now.html");
+        var newContent = '현재 상영작';
+        $('#category-name').html(newContent);
+      }
+      
+      
+      $('#now').click(function() {
+        changePage1();
+      });
+
+      
+    });
+
+$(document).ready(function() {
+      function changePage2() {
+        $("#contents").load("contents-future.html");
+        var newContent = '개봉 예정작';
+        $('#category-name').html(newContent);
+      }
+      
+      
+      $('#future').click(function() {
+        changePage2();
+      });
+
+      
+    });    
+
+    
 </script>
 <head>
     <meta charset="UTF-8">
@@ -19,10 +52,20 @@ $("#slide").load("slide.html");
 </head>
 <body>
     <div id="headers"></div>
+    <div id="slide"></div>
+
     
     <main>
-        <div id="slide"></div>
         <div id="side"></div>
+        <div>
+        <span id="category-name">현재 상영작</span>
+        <span class="category">
+        <span id="now">현재 상영작</span>
+        <span id="future">개봉 예정작</span>
+        </span>
+        <div id="contents"></div>
+
+        </div>
     </main>
 
     <div id="footers"></div>

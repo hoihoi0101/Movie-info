@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5500/src/html/main.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./Movie World_files/jquery-3.7.0.min.js.다운로드"></script>
+<script type="text/javascript">   
+$(document).ready( function() {
+
+$("#headers").load("header.html"); 
+$("#footers").load("footer.html"); 
+$("#side").load("side.html"); 
+$("#contents").load("contents.html"); 
+$("#slide").load("slide.html"); 
+});
+
+</script>
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie World</title>
+<link rel="stylesheet" type="text/css" href="./Movie World_files/main.css"></head>
+<body>
+    <div id="headers">
+
+    
+        
+        
+    
+    
+        <div class="page">
+            <header>
+                <h2>Movie World</h2>
+                <nav>
+                    <ul>
+                        <li><a href="http://127.0.0.1:5500/src/html/main.html#">로그인</a></li>
+                        <li><a href="http://127.0.0.1:5500/src/html/main.html">내 정보</a></li>
+                        <li><a href="http://127.0.0.1:5500/src/html/main.html">즐겨 찾기</a></li>
+                        <li><a href="http://127.0.0.1:5500/src/html/main.html">메뉴</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+ 
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="./Movie World_files/header.css"></div>
+    <div id="slide">
+
+<div class="slidebox">
+	<input type="radio" name="slide" id="slide01" checked="">
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<input type="radio" name="slide" id="slide04">
+	<ul class="slidelist">
+		<li class="slideitem">
+			<a><img src="./Movie World_files/slide01.jpg"></a>
+		</li>
+		<li class="slideitem">
+			<a><img src="./Movie World_files/slide02.jpg"></a>
+		</li>
+		<li class="slideitem">
+			<a><img src="./Movie World_files/slide03.jpg"></a>
+		</li>
+		<li class="slideitem">
+			<a><img src="./Movie World_files/slide04.jpg"></a>
+		</li>0
+		
+	</ul>
+	<div class="slide-control">
+		<div class="control01">
+			<label for="slide04" class="prev"></label>
+			<label for="slide02" class="next"></label>
+		</div>
+		<div class="control02">
+			<label for="slide01" class="prev"></label>
+			<label for="slide03" class="next"></label>
+		</div>
+		<div class="control03">
+			<label for="slide02" class="prev"></label>
+			<label for="slide04" class="next"></label>
+		</div>
+		<div class="control04">
+			<label for="slide03" class="prev"></label>
+			<label for="slide01" class="next"></label>
+		</div>
+	</div>
+</div>
+<link rel="stylesheet" type="text/css" href="./Movie World_files/slide.css"></div>
+    <main>
+        <div id="side">
+
+<div style=" width: 500px; height:800px; overflow-y: scroll;">
+  <p>
+    </p><h2>2023년 6월 영화 순위</h2>
+  <ul>
+    <li>가오갤</li>
+    <li>마리오</li>
+    <li>존윅</li>
+    <li>1234</li>
+    <li>1234</li>
+    <li>1234</li>
+    <li>1234</li>
+    <li>1234</li>
+  </ul>
+  <h2>2023년 7월 개봉 예정작</h2>
+  <ul>
+    <li>가오갤</li>
+    <li>마리오</li>
+    <li>존윅</li>
+    <li>1234</li>
+    <li>1234</li>
+    <li>1234</li>
+    <li>1234</li>
+    <li>1234</li>
+  </ul>
+  <p></p>
+</div><link rel="stylesheet" type="text/css" href="./Movie World_files/side.css"></div>
+        <div id="contents"><h1>컨텐츠 입니다</h1>
+<h1>컨텐츠 입니다</h1>
+<h1>컨텐츠 입니다</h1>
+<h1>컨텐츠 입니다</h1>
+<h1>컨텐츠 입니다</h1>
+</div>
+    </main>
+
+    <div id="footers">
+<footer>
+    <div> <p>Copyright 2023. 팀 알루알루. All rights reserved.</p> </div>
+    <div> <p>Movie World</p> </div>
+</footer><link rel="stylesheet" type="text/css" href="./Movie World_files/footer.css"></div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
