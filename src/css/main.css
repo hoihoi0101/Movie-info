@@ -4,6 +4,14 @@
     font-weight: bold;
 }
 
+.trailer{
+    position: absolute;
+    top: 10%;
+    left: 32%;
+    z-index: 10;
+    display: none;
+}
+
 main {
     width: 100%;
     display: flex;

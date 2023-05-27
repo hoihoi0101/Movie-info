@@ -44,11 +44,13 @@ ul, li {
     cursor:pointer;
 }
 .slidebox .slide-control [class*="control"] label.prev {
+    z-index: 1;
     left:-50px;
     background:#333 url('../../img/left-arrow.png') center center / 50% no-repeat;
 }
 
 .slidebox .slide-control [class*="control"] label.next {
+    z-index: 1;
     right:-50px;
     background:#333 url('../../img/right-arrow.png') center center / 50% no-repeat;
 }
@@ -87,4 +89,13 @@ ul, li {
 }
 #slide04:checked ~ .slide-control .control04 {
     display:block;
+}
+
+#myGif{
+    position: absolute;
+    left: 28%;
+    width: 960px;
+    height: 540px;
+    z-index: 10;
+    display: none;
 }
