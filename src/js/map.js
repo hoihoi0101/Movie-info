@@ -1,4 +1,4 @@
-var apiKey = "AIzaSyCFnSas3ZXz4SFIIs1vT2lbu5iOQOuQqDQ";
+var apiKey = "apikey";
 var myPosition = { lat: 36.625, lng: 127.454 };
 var movies = [
     { name: "메가박스", address: "충청북도 청주시 서원구 1순환로 682 메가박스 청주사창점", url: "../../img/megabox.png", info: "1544-0070", lat: 36.632, lng: 127.460 },
