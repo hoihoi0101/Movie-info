@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'baemin_font';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../font/BMJUA_ttf.ttf') format('truetype');
+}
+
+* {
+    font-family: 'baemin_font';
+}
+
 
 body {
     background-color: rgb(46, 40, 40);
