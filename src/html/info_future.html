@@ -3,12 +3,11 @@
     <div id="headers"></div>
 <head>
     <meta charset="UTF-8">
-    <title>현재상영작-상세정보페이지</title>
+    <title>개봉예정작-상세정보페이지</title>
     <link rel="stylesheet" href="../css/infostyle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-   
     <div class="container">
         <div class="movie-info">
             <img src="image url">
@@ -42,17 +41,9 @@
                 </ul>
             </div>
         </div>
-        <div class="movie-info">
-            <div class="movie-info-content">
-                <h2>평점</h2>
-                <p>IMDb: <span>IMDb 평점 작성</span></p>
-                <p>Rotten Tomatoes: <span>로튼 토마토 평점 작성</span></p>
-                <p>Metacritic: <span>메타크리틱 평점 작성</span></p>
-            </div>
-        </div>
-        <!-- 리뷰 섹션 -->
+        <!-- 기대 메시지 -->
         <div class="review-section">
-            <h2>리뷰</h2>
+            <h2>기대/응원의 메시지</h2>
             <ul class="review-list">
                 <li class="review-item">
                     <div class="name">이름1</div>
@@ -71,20 +62,8 @@
                     <div>이름</div>
                     <input type="text" class="name-input" placeholder="이름을 입력하세요.">
                 </div>
-                <div>별점</div>
-                <div class="rating">
-                    <input type="checkbox" class="star" id="star-1" value="1">
-                    <label for="star-1"></label>
-                    <input type="checkbox" class="star" id="star-2" value="2">
-                    <label for="star-2"></label>
-                    <input type="checkbox" class="star" id="star-3" value="3">
-                    <label for="star-3"></label>
-                    <input type="checkbox" class="star" id="star-4" value="4">
-                    <label for="star-4"></label>
-                    <input type="checkbox" class="star" id="star-5" value="5">
-                    <label for="star-5"></label>
-                </div>
-                <textarea placeholder="어떤 소감을 느끼셨나요?"></textarea>
+                <div>메시지</div>
+                <textarea placeholder="기대/응원의 메시지를 적어주세요!"></textarea>
                 <button class="save-review-button">작성</button>
             </div>
         </div>
