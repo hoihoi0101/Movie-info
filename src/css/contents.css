@@ -10,6 +10,11 @@ hr{
 
 #now{
     margin-right: 10px;
+    color: white;
+}
+
+#future{
+    color: white;
 }
 
 #future:hover{
@@ -26,15 +31,18 @@ hr{
     flex-direction: row;
     flex-wrap: wrap;
 }
+hr{
+    border-color: #000000;
+}
 
 .movie-card{
     display: flex;
     height: 300px;
     width: 700px;
-    border: 1px solid #ddd;
+    border: 1px solid #222020;
     border-radius: 10px;
-    box-shadow: 0px 1px 7px 2px #c7c9d3;
-    border-bottom: 1px solid #dcddde
+    box-shadow: 0px 1px 7px 2px #202021;
+    border-bottom: 1px solid #0d0e0f
 }
 
 .movie-img-main{
@@ -44,8 +52,8 @@ hr{
     width: 150px;
     height: 250px;
     object-fit: cover;
-        box-shadow: 0px 1px 7px 2px #616267;
-        border-bottom: 1px solid #7b7d80;
+        box-shadow: 0px 1px 7px 2px #1a1a1b;
+        border-bottom: 1px solid #161718;
 }
 
 
@@ -54,6 +62,8 @@ hr{
 .movie-text{
     margin-left: 20px;
     margin-top: 20px;
+    color :rgb(255, 255, 255) !important
+    
 }
 
 .movie-name-main{
@@ -64,14 +74,16 @@ hr{
 
 .movie-grade{
     margin-bottom: 20px;
+    color :rgb(255, 255, 255) !important
 }
 
 .audience-value{
     margin-bottom: 30px;
+    color :rgb(255, 255, 255) !important
 }
 
 
 .movie-contents{
     margin-right: 10%;
-
+    color :rgb(255, 255, 255) !important
 }

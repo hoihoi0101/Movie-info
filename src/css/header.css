@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+*{
+    color :blueviolet;
+}
 
 ul {
     list-style: none;
@@ -9,6 +12,11 @@ ul {
 .page {
     width: 1440px;
     margin: 0 auto;
+}
+
+.nav1 .nav2 .nav3 .nav4{
+    position: absolute;
+    top: 2.3%;
 }
 
 .nav1 :hover{
@@ -27,13 +35,17 @@ ul {
     font-weight: bold;
 }
 
+#headers{
+    background-color: rgb(32, 29, 29);
+}
+
 header {
+    background-color: rgb(32, 29, 29);
     width: 100;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 header > h2 {
@@ -60,7 +72,7 @@ header ul > li {
 }
 
 a {
-    color: black;
+    color :white;
     text-decoration: none;
     outline: none;
 }

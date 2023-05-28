@@ -20,7 +20,7 @@ ul, li {
     position:relative;
     display:inline-block;
     vertical-align:middle;
-    background-color:#fff;
+    background-color: rgb(46, 40, 40);
     width:100%;transition:all 1s;
     border-radius: 10px;
 }

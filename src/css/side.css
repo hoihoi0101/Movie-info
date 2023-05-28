@@ -15,10 +15,10 @@ p {
     display: flex;
     width: 80%;
     align-items: center;
-    border: 1px solid #ddd;
+    border: 1px solid #0f0e0e;
     border-radius: 10px;
-    box-shadow: 0px 1px 7px 2px #c7c9d3;
-    border-bottom: 1px solid #dcddde
+    box-shadow: 0px 1px 7px 2px #161718;
+    border-bottom: 1px solid #212427
 }
 
 .movie-img {
@@ -28,8 +28,8 @@ p {
     height: 60px;
     margin-left: 16px;
     margin-right: 16px;
-    box-shadow: 0px 1px 7px 2px #c7c9d3;
-    border-bottom: 1px solid #dcddde
+    box-shadow: 0px 1px 7px 2px #25262c;
+    border-bottom: 1px solid #1a1d1f
     
   }
 
@@ -40,4 +40,5 @@ p {
 
   .topic{
     margin-left: 13%;
+    color: white;
   }
