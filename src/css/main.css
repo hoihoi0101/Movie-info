@@ -1,11 +1,22 @@
-#category-name{
+@font-face {
+    font-family: 'baemin_font';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../font/BMJUA_ttf.ttf') format('truetype');
+}
+
+* {
+    font-family: 'baemin_font';
+}
+
+#category-name {
     margin-left: 30px;
     font-size: 20px;
     font-weight: bold;
-    color :blueviolet;
+    color: blueviolet;
 }
 
-.trailer{
+.trailer {
     position: absolute;
     top: 10%;
     left: 32%;
@@ -13,7 +24,7 @@
     display: none;
 }
 
-body{
+body {
     background-color: rgb(46, 40, 40);
 }
 
@@ -23,9 +34,9 @@ main {
     flex-grow: 1;
     overflow: hidden;
     background-color: rgb(46, 40, 40);
-  }
+}
 
-#side{
+#side {
     margin-top: 35px;
 }
 
@@ -33,49 +44,57 @@ main {
     flex-grow: 1;
     padding: 0 30px 50px;
     overflow-y: auto;
-  }
+}
 
- #slide{
+#slide {
     margin-left: 20%;
     width: 1400px;
     background-color: rgb(46, 40, 40);
- }
-  
+}
+
 /* 임의의 영역 생성 */
-.scrollBar { 
+.scrollBar {
     width: 200px;
     height: 200px;
     overflow-y: scroll;
-  }
-  
-  /* 아래의 모든 코드는 영역::코드로 사용 */
-  .scrollBar::-webkit-scrollbar {
-      width: 10px;  /* 스크롤바의 너비 */
-  }
-  
-  .scrollBar::-webkit-scrollbar-thumb {
-      height: 30%; /* 스크롤바의 길이 */
-      background: #000000; /* 스크롤바의 색상 */
-      
-      border-radius: 10px;
-  }
-  
-  .scrollBar::-webkit-scrollbar-track {
-      background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
-  }
+}
+
+/* 아래의 모든 코드는 영역::코드로 사용 */
+.scrollBar::-webkit-scrollbar {
+    width: 10px;
+    /* 스크롤바의 너비 */
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #000000;
+    /* 스크롤바의 색상 */
+
+    border-radius: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
+}
 
 
 body::-webkit-scrollbar {
-    width: 8px;  /* 스크롤바의 너비 */
+    width: 8px;
+    /* 스크롤바의 너비 */
 }
 
 body::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #000000; /* 스크롤바의 색상 */
-    
+    height: 30%;
+    /* 스크롤바의 길이 */
+    background: #000000;
+    /* 스크롤바의 색상 */
+
     border-radius: 10px;
 }
 
 body::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+    background: rgba(33, 122, 244, .1);
+    /*스크롤바 뒷 배경 색상*/
 }
