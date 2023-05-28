@@ -295,6 +295,10 @@ body::-webkit-scrollbar-track {
     margin-left: 3%;
 }
 
+.movie-info-content{
+    width: 100%;
+}
+
 .thumb img {
     width: 100%;
     border-radius: 50%;
