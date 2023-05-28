@@ -15,7 +15,7 @@ var gifContainer4 = document.querySelector('.slideitem4');
     });
 
     gifContainer2.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/galxy.gif"
+      gifImage.src = "../../video/city.gif"
       gifImage.style.display = 'block';
     });
 
@@ -24,7 +24,7 @@ var gifContainer4 = document.querySelector('.slideitem4');
     });
 
     gifContainer3.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/galxy.gif"
+      gifImage.src = "../../video/mission.gif"
       gifImage.style.display = 'block';
     });
 
@@ -33,7 +33,7 @@ var gifContainer4 = document.querySelector('.slideitem4');
     });
 
     gifContainer4.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/galxy.gif"
+      gifImage.src = "../../video/speed.gif"
       gifImage.style.display = 'block';
     });
 

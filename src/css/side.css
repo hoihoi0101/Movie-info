@@ -31,11 +31,12 @@ li{
   }
 
   .movie-name {
+    color: white;
     margin-bottom: 15px;
     font-weight: bold;
   }
 
   .topic{
     margin-left: 13%;
-    color: white;
+    color: blueviolet;
   }
