@@ -83,7 +83,7 @@ textarea {
 }
 
 button {
-    background-color: blueviolet;
+    background-color: #4169E1;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -93,7 +93,7 @@ button {
 }
 
 button:hover {
-    background-color: rgb(117, 28, 201);
+    background-color: #285BC1;
 }
 
 
@@ -124,7 +124,6 @@ h3 {
 }
 
 .review-list {
-    
     list-style-type: none;
     padding: 0;
 }
@@ -147,17 +146,8 @@ h3 {
 
 
 .review-item .name {
-    color: white;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-.content{
-    color: white;
-}
-
-.review-item .ratingStars{
-    color: white;
 }
 
 #scroll-to-top-button {
@@ -168,13 +158,12 @@ h3 {
     height: 40px;
     font-size: 20px;
     color: #fff;
-    background-color: blueviolet;
+    background-color: #4169E1;
     border: none;
     border-radius: 50%;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
-    z-index: 5;
 }
 
 #scroll-to-top-button:hover {
@@ -187,7 +176,7 @@ h3 {
 }
 
 .brand-button {
-    background-color:blueviolet;
+    background-color: #4169E1;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -202,11 +191,11 @@ h3 {
 }
 
 .brand-button:hover {
-    background-color: rgb(116, 32, 196);
+    background-color: #285BC1;
 }
 
 .reserv {
-    
+
     text-align: center;
 }
 
@@ -218,7 +207,6 @@ h3 {
 
 
 .rating {
-    
     display: inline-block;
 }
 
@@ -239,7 +227,7 @@ label:before {
 
 input[type="checkbox"]:checked+label:before {
     content: '★';
-    color: blueviolet;
+    color: #ffa500;
 }
 
 label.star {
@@ -254,69 +242,4 @@ label.star {
     content: '\2605';
     color: #FD4;
     transition: all .25s;
-}
-
-body::-webkit-scrollbar {
-    width: 8px;  /* 스크롤바의 너비 */
-}
-
-body::-webkit-scrollbar-thumb {
-    height: 30%; /* 스크롤바의 길이 */
-    background: #000000; /* 스크롤바의 색상 */
-    
-    border-radius: 10px;
-}
-
-body::-webkit-scrollbar-track {
-    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
-}
-
-
-.people_card {
-    display: inline-block;
-    width: 200px;
-    border-radius: 10px;
-    border: 1px solid;
-    border-color: #dbcfcf;
-    background-color: rgb(46, 40, 40);
-    padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 1%;
-    margin-left: 3%;
-}
-
-.thumb img {
-    width: 100%;
-    border-radius: 50%;
-}
-
-.title_box {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.people_name {
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.sub_name {
-    color: white;
-    font-size: 1rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    margin-right: 4px;
-}
-
-.info_name{
-    display: block;
-}
-
-.white_text{
-    color: white;
 }

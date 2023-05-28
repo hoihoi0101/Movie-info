@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 <script src="../js/jquery-3.7.0.min.js"></script>
 <script src="../js/main_video.js"></script>
 <script type="text/javascript">   
 
-$(document).ready( function() { //jquery 사용
+$(document).ready( function() {
 
-$("#headers").load("header.html"); //header.html을 객체화
-$("#footers").load("footer.html"); //footer.html을 객체화
-$("#side").load("side.html"); //side.html을 객체화
-$("#contents").load("contents-now.html"); //contents-now.html을 객체화
-$("#slide").load("slide.html"); //slide.html을 객체화
+$("#headers").load("header.html"); 
+$("#footers").load("footer.html"); 
+$("#side").load("side.html"); 
+$("#contents").load("contents-now.html"); 
+$("#slide").load("slide.html"); 
 });
 
 $(document).ready(function() {
-      function changePage1() {  //컨텐츠 페이지 교환 함수
+      function changePage1() {
         $("#contents").load("contents-now.html");
         var newContent = '현재 상영작';
-        $('#category-name').html(newContent);//현재 상영작 페이지로 교체
+        $('#category-name').html(newContent);
       }
       
       
-      $('#now').click(function() {//now 텍스트 클릭시
+      $('#now').click(function() {
         changePage1();
       });
 
@@ -31,14 +30,14 @@ $(document).ready(function() {
     });
 
 $(document).ready(function() {
-      function changePage2() { //컨텐츠 페이지 교환 함수2
+      function changePage2() {
         $("#contents").load("contents-future.html");
         var newContent = '개봉 예정작';
-        $('#category-name').html(newContent);//개봉 예정작 페이지로 교체
+        $('#category-name').html(newContent);
       }
       
       
-      $('#future').click(function() {//future 텍스트 클릭시
+      $('#future').click(function() {
         changePage2();
       });
 
@@ -53,8 +52,8 @@ $(document).ready(function() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allô Cinéma</title>
 </head>
-<div id="headers"></div>
 <body>
+    <div id="headers"></div>
     <div id="slide"></div>
 
     

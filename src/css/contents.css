@@ -39,7 +39,6 @@ hr{
     display: flex;
     height: 300px;
     width: 700px;
-    align-items: ;
     border: 1px solid #222020;
     border-radius: 10px;
     box-shadow: 0px 1px 7px 2px #202021;
@@ -47,14 +46,14 @@ hr{
 }
 
 .movie-img-main{
-    margin-top: 10px;
-    margin-bottom: 5px;
-    width: 200px;
-    height: 280px;
-    margin-left: 10px;
-    margin-right: 10px;
-    box-shadow: 0px 1px 7px 2px #25262c;
-    border-bottom: 1px solid #1a1d1f
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+        box-shadow: 0px 1px 7px 2px #1a1a1b;
+        border-bottom: 1px solid #161718;
 }
 
 
@@ -63,7 +62,7 @@ hr{
 .movie-text{
     margin-left: 20px;
     margin-top: 20px;
-    color :rgb(255, 255, 255) !important;
+    color :rgb(255, 255, 255) !important
     
 }
 
@@ -75,20 +74,16 @@ hr{
 
 .movie-grade{
     margin-bottom: 20px;
-    color :rgb(255, 255, 255) !important;
+    color :rgb(255, 255, 255) !important
 }
 
 .audience-value{
     margin-bottom: 30px;
-    color :rgb(255, 255, 255) !important;
+    color :rgb(255, 255, 255) !important
 }
 
 
 .movie-contents{
-    width: 400px;
-    height: 110px;
-    margin-right: 70%;
-    color :rgb(255, 255, 255) !important;
-    overflow: hidden;
-    text-overflow:clip;
+    margin-right: 10%;
+    color :rgb(255, 255, 255) !important
 }

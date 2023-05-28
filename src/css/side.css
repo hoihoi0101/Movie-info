@@ -6,6 +6,9 @@ li{
     margin: 5% 0;
 }
 
+p {
+    margin-left: 10%;
+}
 
 .movie{
     margin-left: 10%;
@@ -31,12 +34,11 @@ li{
   }
 
   .movie-name {
-    color: white;
     margin-bottom: 15px;
     font-weight: bold;
   }
 
   .topic{
     margin-left: 13%;
-    color: blueviolet;
+    color: white;
   }
