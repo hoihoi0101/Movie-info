@@ -14,15 +14,16 @@
             <img src="image url">
             <div class="movie-info-content">
                 <h2>기본 정보</h2>
-                <p>제목: <span>영화 제목 작성</span></p>
-                <p>개봉 일자: <span>YYYY-MM-DD</span></p>
-                <p>장르: <span>장르 작성</span></p>
-                <p>러닝 타임: <span>런닝 타임 작성</span></p>
+                <p class="white_text">제목: <span class="white_text">영화 제목 작성</span></p>
+                <p class="white_text">개봉 일자: <span class="white_text">YYYY-MM-DD</span></p>
+                <p class="white_text">장르: <span class="white_text">장르 작성</span></p>
+                <p class="white_text">러닝 타임: <span class="white_text">런닝 타임 작성</span></p>
+                
             </div>
         </div>
         <div class="movie-info">
             <div class="reserv">
-                <p>예약하러 가기 ➜ &nbsp; </p>
+                <p class="white_text">예약하러 가기 ➜ &nbsp; </p>
             </div>
             <div class="button-row">
                 <a href="http://www.cgv.co.kr/ticket/" target="_blank" class="brand-button">CGV</a> &nbsp;
@@ -30,29 +31,82 @@
                 <a href="https://www.lottecinema.co.kr/NLCHS/Ticketing" target="_blank" class="brand-button">롯데시네마</a>&nbsp;
             </div>
         </div>
+
         <div class="movie-info">
             <div class="movie-info-content">
                 <h2>소개</h2>
-                <p>소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분.</p>
+                <p class="white_text"   >소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분.</p>
             </div>
         </div>
 
         <div class="movie-info">
             <div class="movie-info-content">
-                <h2>감독/출연</h2>
-                <p>감독: <span>감독 작성</span></p>
-                <ul>
-                    <li><span>배우 1</span></li>
-                    <li><span>배우 2</span></li>
-                </ul>
+                <h2 class="info_name">감독</h2>
+
+                <div class="people_card">
+                    <div class="thumb">
+                        <img src="../../img/human_default.png" alt="사진">
+                    </div>
+                    <div class="title_box">
+                        <span class="sub_name" style="max-height: 4rem0;">감독</span>
+                        <strong class="people_name" style="max-height:  4rem;">감독 이름</strong>
+                    </div>
+               </div>
+
             </div>
         </div>
+
+        <div class="movie-info">
+            <div class="movie-info-content">
+                <h2 class="info_name">출연</h2>
+
+                <div class="people_card">
+                    <div class="thumb">
+                        <img src="../../img/human_default.png" alt="사진">
+                    </div>
+                    <div class="title_box">
+                        <span class="sub_name" style="max-height: 4rem0;">배우</span>
+                        <strong class="people_name" style="max-height:  4rem;">배우 이름</strong>
+                    </div>
+               </div>
+               <div class="people_card">
+                <div class="thumb">
+                    <img src="../../img/human_default.png" alt="사진">
+                </div>
+                <div class="title_box">
+                    <span class="sub_name" style="max-height: 4rem0;">배우</span>
+                    <strong class="people_name" style="max-height:  4rem;">배우 이름</strong>
+                </div>
+                </div>
+                <div class="people_card">
+                    <div class="thumb">
+                        <img src="../../img/human_default.png" alt="사진">
+                    </div>
+                    <div class="title_box">
+                        <span class="sub_name" style="max-height: 4rem0;">배우</span>
+                        <strong class="people_name" style="max-height:  4rem;">배우 이름</strong>
+                    </div>
+               </div>
+               <div class="people_card">
+                <div class="thumb">
+                    <img src="../../img/human_default.png" alt="사진">
+                </div>
+                <div class="title_box">
+                    <span class="sub_name" style="max-height: 4rem0;">배우</span>
+                    <strong class="people_name" style="max-height:  4rem;">배우 이름</strong>
+                </div>
+                </div>
+           
+
+            </div>
+        </div>
+
         <div class="movie-info">
             <div class="movie-info-content">
                 <h2>평점</h2>
-                <p>IMDb: <span>IMDb 평점 작성</span></p>
-                <p>Rotten Tomatoes: <span>로튼 토마토 평점 작성</span></p>
-                <p>Metacritic: <span>메타크리틱 평점 작성</span></p>
+                <p class="white_text">IMDb: <span class="white_text">IMDb 평점 작성</span></p>
+                <p class="white_text">Rotten Tomatoes: <span class="white_text">로튼 토마토 평점 작성</span></p>
+                <p class="white_text">Metacritic: <span class="white_text">메타크리틱 평점 작성</span></p>
             </div>
         </div>
         <!-- 리뷰 섹션 -->
@@ -60,23 +114,23 @@
             <h2>리뷰</h2>
             <ul class="review-list">
                 <li class="review-item">
-                    <div class="name">이름1</div>
-                    <div>★★★★☆</div>
-                    <div>리뷰 내용1</div>
+                    <div class="name" >이름1</div>
+                    <div class="ratingStars">★★★★☆</div>
+                    <div class="content">리뷰 내용1</div>
                 </li><br>
                 <li class="review-item">
                     <div class="name">이름2</div>
-                    <div>★★★☆☆</div>
-                    <div>리뷰 내용2</div>
+                    <div class="ratingStars">★★★☆☆</div>
+                    <div class="content">리뷰 내용2</div>
                 </li><br>
             </ul>
             <div class="comment-input">
                 <div class="comment-input-container">
                     <br>
-                    <div>이름</div>
+                    <div class="white_text">이름</div>
                     <input type="text" class="name-input" placeholder="이름을 입력하세요.">
                 </div>
-                <div>별점</div>
+                <div class="white_text">별점</div>
                 <div class="rating">
                     <input type="checkbox" class="star" id="star-1" value="1">
                     <label for="star-1"></label>
@@ -157,7 +211,7 @@
             return $("<li>", { class: "review-item" })
                 .append($("<div>", { class: "name", text: name }))
                 .append($("<div>", { text: "★".repeat(ratingStars) })) // 별점
-                .append($("<div>", { html: content }))
+                .append($("<div>", { class: "content",html: content }))
                 .append($("<br>")); // 여기 수정
         }
 
