@@ -62,7 +62,7 @@ hr{
 .movie-text{
     margin-left: 20px;
     margin-top: 20px;
-    color :rgb(255, 255, 255) !important
+    color :rgb(255, 255, 255) !important;
     
 }
 
@@ -74,16 +74,20 @@ hr{
 
 .movie-grade{
     margin-bottom: 20px;
-    color :rgb(255, 255, 255) !important
+    color :rgb(255, 255, 255) !important;
 }
 
 .audience-value{
     margin-bottom: 30px;
-    color :rgb(255, 255, 255) !important
+    color :rgb(255, 255, 255) !important;
 }
 
 
 .movie-contents{
+    width: 500px;
+    height: 110px;
     margin-right: 10%;
-    color :rgb(255, 255, 255) !important
+    color :rgb(255, 255, 255) !important;
+    overflow: hidden;
+    text-overflow:clip;
 }

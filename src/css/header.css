@@ -2,6 +2,7 @@
 
 *{
     color :blueviolet;
+    
 }
 
 ul {
@@ -14,10 +15,6 @@ ul {
     margin: 0 auto;
 }
 
-.nav1 .nav2 .nav3 .nav4{
-    position: absolute;
-    top: 2.3%;
-}
 
 .nav1 :hover{
     font-weight: bold;
@@ -54,7 +51,6 @@ header > h2 {
 
 header > nav {
 	width:600px;
-	height:100%;
 }
 
 header ul {
