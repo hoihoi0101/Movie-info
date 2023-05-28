@@ -1,5 +1,4 @@
 
-
 body {
     background-color: rgb(46, 40, 40);
     margin: 0;
@@ -18,4 +17,8 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
     background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+canvas {
+    border: 3px solid black;
 }

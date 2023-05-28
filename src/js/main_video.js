@@ -1,7 +1,7 @@
-var gifContainer1 = document.querySelector('.slideitem1');
-var gifContainer2 = document.querySelector('.slideitem2');
-var gifContainer3 = document.querySelector('.slideitem3');
-var gifContainer4 = document.querySelector('.slideitem4');
+var gifContainer1 = document.querySelector('.slideitem1'); //슬라이드 1번 객체화
+var gifContainer2 = document.querySelector('.slideitem2');  //슬라이드 2번 객체화
+var gifContainer3 = document.querySelector('.slideitem3');  //슬라이드 3번 객체화
+var gifContainer4 = document.querySelector('.slideitem4');  //슬라이드 4번 객체화
 
     var gifImage = document.getElementById('myGif');
 

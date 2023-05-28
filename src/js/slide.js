@@ -3,7 +3,7 @@ var slides = document.querySelectorAll('.slideitem');
 // 현재 슬라이드 인덱스를 초기화합니다.
 var currentSlide = 0;
 // 슬라이드를 넘기는 시간 간격을 설정합니다. (밀리초 단위)
-var slideInterval = 3000; // 3초
+var slideInterval = 10000; // 10초
 
 // 이전 슬라이드로 이동하는 함수
 function prevSlide() {
