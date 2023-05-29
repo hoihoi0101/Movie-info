@@ -10,33 +10,49 @@
 <body>
     <div class="container">
         <div class="movie-info">
-            <img src="image url">
+            <img id="movie-image" src="image url">
             <div class="movie-info-content">
                 <h2>기본 정보</h2>
-                <p>제목: <span>영화 제목 작성</span></p>
-                <p>개봉 일자: <span>YYYY-MM-DD</span></p>
-                <p>장르: <span>장르 작성</span></p>
-                <p>러닝 타임: <span>런닝 타임 작성</span></p>
+                <p class="white_text">제목: <span class="white_text" id="movie-title">영화 제목 작성</span></p>
+                <p class="white_text">개봉: <span class="white_text" id="movie-release-date">YYYY-MM-DD</span></p>
+                <p class="white_text">등급: <span class="white_text" id="movie-old">영화 등급</span></p>
+                <p class="white_text">장르: <span class="white_text" id="movie-genre">장르 작성</span></p>
+                <p class="white_text">국가: <span class="white_text" id="movie-state">국가</span></p>
+                <p class="white_text">러닝 타임: <span class="white_text" id="movie-running-time">런닝 타임 작성</span></p>
+                <p class="white_text">배급: <span class="white_text" id="movie-distributer">배급</span></p>
             </div>
         </div>
 
         <div class="movie-info">
             <div class="movie-info-content">
                 <h2>소개</h2>
-                <p>소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분.</p>
+                <p class="white_text" id="movie-intro">소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분.</p>
             </div>
         </div>
 
         <div class="movie-info">
             <div class="movie-info-content">
-                <h2>감독/출연</h2>
-                <p>감독: <span>감독 작성</span></p>
-                <ul>
-                    <li><span>배우 1</span></li>
-                    <li><span>배우 2</span></li>
-                </ul>
+                <h2 class="info_name">감독</h2>
+                <div class="people_card">
+                    <div class="thumb">
+                        <img src="../../img/human_default.png" alt="사진">
+                    </div>
+                    <div class="title_box">
+                        <span class="sub_name" style="max-height: 4rem0;">감독</span>
+                        <strong class="people_name" id="movie-director" style="max-height:  4rem;">감독 이름</strong>
+                    </div>
+               </div>
             </div>
         </div>
+
+        <div class="movie-info">
+            <div class="movie-info-content">
+                <h2 class="info_name">출연</h2>
+                <div class="movie-actor">
+                </div>
+            </div>
+        </div>
+
         <!-- 기대 메시지 -->
         <div class="review-section">
             <h2>기대/응원의 메시지</h2>
@@ -221,5 +237,6 @@ $(document).ready(function() {
 
     
 </script>
+<script src="../js/data_future.js"></script>
 
 </html>
