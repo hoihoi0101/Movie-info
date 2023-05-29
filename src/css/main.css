@@ -9,6 +9,29 @@
     font-family: 'baemin_font';
 }
 
+#scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 5;
+}
+
+.abcdefg{
+    margin-left: 30px;
+    width: 1400px;
+    background-color: rgb(32, 29, 29);
+}
+
 #category-name {
     margin-left: 30px;
     font-size: 20px;
