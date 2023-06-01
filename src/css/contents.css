@@ -1,5 +1,11 @@
 .category{
-    margin-left: 1100px;
+    margin-left: 950px;
+}
+
+#category-name{
+    position: absolute;
+    top: 84%;
+    font-size:30px;
 }
 
 hr{
@@ -9,11 +15,19 @@ hr{
 
 
 #now{
-    margin-right: 10px;
+    position: absolute;
+    top: 84%;
+    right:  19%;
+    font-size:30px;
     color: white;
 }
 
+
 #future{
+    position: absolute;
+    right:  12%;
+    top: 84%;
+    font-size:30px;
     color: white;
 }
 
@@ -38,11 +52,19 @@ hr{
 .movie-card{
     display: flex;
     height: 300px;
-    width: 700px;
+    width: 695px;
     border: 1px solid #222020;
     border-radius: 10px;
     box-shadow: 0px 1px 7px 2px #202021;
-    border-bottom: 1px solid #0d0e0f
+    border-bottom: 1px solid #0d0e0f;
+    transition: all 0.3s;
+
+}
+
+.movie-card:hover{
+    width: 700px;
+    background-color: rgb(33, 28, 28);
+
 }
 
 .movie-img-main{
@@ -62,25 +84,38 @@ hr{
 .movie-text{
     margin-left: 20px;
     margin-top: 20px;
-    color :rgb(255, 255, 255) !important;
+    color :rgb(255, 255, 255) 
     
 }
+
 
 .movie-name-main{
     font-size: 24px;
     margin-bottom: 20px;
-    font-weight: bold;
     font-size: 20px;
+    transition: all 0.3s;
+}
+
+.movie-name-main :hover{
+    font-weight: bold;
 }
 
 .movie-grade{
     margin-bottom: 20px;
-    color :rgb(255, 255, 255) !important;
+    color :rgb(255, 255, 255) 
+}
+
+.movie-grade :hover{
+    font-weight: bold;
 }
 
 .audience-value{
     margin-bottom: 30px;
     color :rgb(255, 255, 255) !important;
+}
+
+.audience-value :hover{
+    font-weight: bold;
 }
 
 
@@ -92,4 +127,8 @@ hr{
     color :rgb(255, 255, 255) !important;
     overflow: hidden;
     text-overflow:clip;
+}
+
+.movie-contents :hover{
+    font-weight: bold;
 }

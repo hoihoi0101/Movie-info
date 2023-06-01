@@ -5,6 +5,12 @@
     
 }
 
+.the_title{
+    font-size: 30px;
+}
+
+
+
 ul {
     list-style: none;
 }
@@ -16,20 +22,20 @@ ul {
 }
 
 
-.nav1 :hover{
-    font-weight: bold;
+.nav1 {
+    font-size: 28px;
 }
 
 .nav2 :hover{
-    font-weight: bold;
+    font-size: 200px;
 }
 
-.nav3 :hover{
-    font-weight: bold;
+.nav3 {
+    font-size: 28px;
 }
 
 .nav4 :hover{
-    font-weight: bold;
+     font-size: 200px;  
 }
 
 #headers{
@@ -46,16 +52,14 @@ header {
     justify-content: space-between;
 }
 
-header > h2 {
-	margin-left:20px;
-}
+
 
 header > nav {
 	width:300px;
 }
 
 header ul {
-	width:100%;
+	width:120%;
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -68,8 +72,17 @@ header ul > li {
 	align-items: center;
 }
 
+
+li :hover{
+    font-weight: bold;
+}
+
 a {
     color :white;
     text-decoration: none;
     outline: none;
+}
+
+.the_title :hover{
+    font-weight: bold;
 }
