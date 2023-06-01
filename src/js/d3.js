@@ -81,7 +81,7 @@ svg9.append("rect")
 
 // Add the numbers next to each bar
 svg1.append("text")
-  .text(dataSet[0]+"명")
+  .text(Number(dataSet[0]).toLocaleString()+"명")
   .attr("x", dataSet[0] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -90,7 +90,7 @@ svg1.append("text")
   .attr("fill", "white");
 
 svg2.append("text")
-  .text(dataSet[1]+"명")
+  .text(Number(dataSet[1]).toLocaleString()+"명")
   .attr("x", dataSet[1] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -99,7 +99,7 @@ svg2.append("text")
   .attr("fill", "white");
 
 svg3.append("text")
-  .text(dataSet[2]+"명")
+  .text(Number(dataSet[2]).toLocaleString()+"명")
   .attr("x", dataSet[2] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -108,7 +108,7 @@ svg3.append("text")
   .attr("fill", "white");
 
 svg4.append("text")
-  .text(dataSet[3]+"명")
+  .text(Number(dataSet[3]).toLocaleString()+"명")
   .attr("x", dataSet[3] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -117,7 +117,7 @@ svg4.append("text")
   .attr("fill", "white");
 
 svg5.append("text")
-  .text(dataSet[4]+"명")
+  .text(Number(dataSet[4]).toLocaleString()+"명")
   .attr("x", dataSet[4] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -126,7 +126,7 @@ svg5.append("text")
   .attr("fill", "white");
 
 svg6.append("text")
-  .text(dataSet[5]+"명")
+  .text(Number(dataSet[5]).toLocaleString()+"명")
   .attr("x", dataSet[5] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -135,7 +135,7 @@ svg6.append("text")
   .attr("fill", "white");
 
 svg7.append("text")
-  .text(dataSet[6]+"명")
+  .text(Number(dataSet[6]).toLocaleString()+"명")
   .attr("x", dataSet[6] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -144,7 +144,7 @@ svg7.append("text")
   .attr("fill", "white");
 
 svg8.append("text")
-  .text(dataSet[7]+"명")
+  .text(Number(dataSet[7]).toLocaleString()+"명")
   .attr("x", dataSet[7] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
@@ -153,7 +153,7 @@ svg8.append("text")
   .attr("fill", "white");
 
 svg9.append("text")
-  .text(dataSet[8]+"명")
+  .text(Number(dataSet[8]).toLocaleString()+"명")
   .attr("x", dataSet[8] / 22500 + 5)
   .attr("y", height / 2)
   .attr("text-anchor", "start")
