@@ -77,7 +77,7 @@
       canGenerateObstacle = false;
       setTimeout(() => {
         canGenerateObstacle = true;
-      }, 1000);
+      }, 1300);
     }
 
     function moveUp() {
@@ -108,7 +108,7 @@
       // Move obstacles
       for (let i = 0; i < obstacles.length; i++) {
         let obstacle = obstacles[i];
-        obstacle.x -= 2;
+        obstacle.x -= 4;
         drawObstacle(obstacle.x, obstacle.height1, obstacle.height2);
 
         // Check collision
