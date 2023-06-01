@@ -23,7 +23,9 @@ var infoes = [
         time: '150분',
         distributer: '월트 디즈니 컴퍼니 코리아',
         director: '제임스 건',
+        director_img : '제임스건',
         actors: ['크리스 프랫', '조 샐다나', '데이브 바티스타'],
+        actors_img :['크리스 프랫','조 샐다나','데이트 바티스타'],
         ratings: [
         '메타스코어 64 / 100',
         '평점 8.3 / 10(IMDb Top 250 151위)',
