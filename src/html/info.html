@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <div id="headers"></div>
+<div id="headers"></div>
+
 <head>
     <meta charset="UTF-8">
     <title>현재상영작-상세정보페이지</title>
     <link rel="stylesheet" href="../css/infostyle.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-   
     <div class="container">
         <div class="movie-info">
             <img id="movie-image" src="image url">
@@ -30,20 +31,23 @@
             <div class="button-row">
                 <a href="http://www.cgv.co.kr/ticket/" target="_blank" class="brand-button">CGV</a> &nbsp;
                 <a href="https://www.megabox.co.kr/booking" target="_blank" class="brand-button">메가박스</a> &nbsp;
-                <a href="https://www.lottecinema.co.kr/NLCHS/Ticketing" target="_blank" class="brand-button">롯데시네마</a>&nbsp;
+                <a href="https://www.lottecinema.co.kr/NLCHS/Ticketing" target="_blank"
+                    class="brand-button">롯데시네마</a>&nbsp;
             </div>
         </div>
 
         <div class="movie-info">
             <div class="movie-info-content">
                 <h2>소개</h2>
-                <p class="white_text" id="movie-intro">소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분.</p>
+                <p class="white_text" id="movie-intro">소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분. 소개 내용이 있는
+                    부분. 소개 내용이 있는 부분. 소개 내용이 있는 부분.</p>
             </div>
         </div>
 
         <div class="movie-info">
             <div class="movie-info-content">
                 <h2 class="info_name">감독</h2>
+
                 <div class="people_card">
                     <div class="thumb">
                         <img src="../../img/human_default.png" alt="사진">
@@ -52,7 +56,8 @@
                         <span class="sub_name" style="max-height: 4rem0;">감독</span>
                         <strong class="people_name" id="movie-director" style="max-height:  4rem;">감독 이름</strong>
                     </div>
-               </div>
+                </div>
+
             </div>
         </div>
 
@@ -79,7 +84,7 @@
             <h2>리뷰</h2>
             <ul class="review-list">
                 <li class="review-item">
-                    <div class="name" >이름1</div>
+                    <div class="name">이름1</div>
                     <div class="ratingStars">★★★★☆</div>
                     <div class="content">리뷰 내용1</div>
                 </li><br>
@@ -119,11 +124,18 @@
 <div id="footers"></div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 <script>
+
+
+    // 현재 URL에서 쿼리 파라미터 값을 읽어옴
+    var urlParams = new URLSearchParams(window.location.search);
+    var value = urlParams.get('value');
+    console.log("value", value);
+
     $(document).ready(function () {
 
         // 스크롤 관련 -----------------------------------------------------------------
         function scrollToTop() {
-            $('html, body').animate({scrollTop: 0}, 'smooth');
+            $('html, body').animate({ scrollTop: 0 }, 'smooth');
         }
 
         $(window).scroll(function () {
@@ -162,40 +174,47 @@
             });
         });
 
-        // 리뷰 저장 ----------------------------------------------
-        function saveReviewsToLocal(reviews) {
-            localStorage.setItem('reviews', JSON.stringify(reviews));
+        // 리뷰 저장
+        function saveReviewsToLocal(value, reviews) {
+            const key = `reviews-${value}`;
+            localStorage.setItem(key, JSON.stringify(reviews));
         }
 
-        function getReviewsFromLocal() {
-            const storedReviews = localStorage.getItem('reviews');
+        // 리뷰 불러오기
+        function getReviewsFromLocal(value) {
+            const key = `reviews-${value}`;
+            const storedReviews = localStorage.getItem(key);
             return storedReviews ? JSON.parse(storedReviews) : [];
         }
 
+        //리뷰생성
         function createReviewItem(name, ratingStars, content) {
             return $("<li>", { class: "review-item" })
                 .append($("<div>", { class: "name", text: name }))
                 .append($("<div>", { text: "★".repeat(ratingStars) })) // 별점
-                .append($("<div>", { class: "content",html: content }))
-                .append($("<br>")); // 여기 수정
+                .append($("<div>", { class: "content", html: content }))
+                .append($("<br>"));
         }
 
         function displayReviews() {
             const reviewList = $(".review-list");
             reviewList.empty();
-            const storedReviews = getReviewsFromLocal();
+            const value = urlParams.get('value');
+            const storedReviews = getReviewsFromLocal(value);
 
             storedReviews.forEach(function (review) {
-                const newReview = createReviewItem(review.name, review.ratingStars, review.content); // 여기 수정
+                const newReview = createReviewItem(review.name, review.ratingStars, review.content);
                 reviewList.append(newReview);
             });
         }
 
-        function addReview(name, ratingIndex, content) {
-            const storedReviews = getReviewsFromLocal();
-            const ratingStars = ratingIndex ; // 여기 수정
+        // 리뷰 추가
+        function addReview(value, name, ratingIndex, content) {
+            const storedReviews = getReviewsFromLocal(value);
+            const ratingStars = ratingIndex;
             storedReviews.push({ name, ratingStars, content });
-            saveReviewsToLocal(storedReviews);
+            saveReviewsToLocal(value, storedReviews);
+            console.log("value!!!", value);
             displayReviews();
         }
 
@@ -203,13 +222,14 @@
             const nameInput = $(".name-input");
             const ratingIndex = checkboxes.filter((el) => el.checked).length;
             const contentTextarea = $("textarea");
+            const value = urlParams.get('value');
 
             const name = nameInput.val();
             const content = contentTextarea.val();
 
             if (name) {
                 if (ratingIndex >= 0) {
-                    addReview(name, ratingIndex, content);
+                    addReview(value, name, ratingIndex, content);
                     nameInput.val('');
                     checkboxes.forEach((checkbox) => { checkbox.checked = false; });
                     contentTextarea.val('');
@@ -271,5 +291,3 @@
 
 </script>
 <script src="../js/data.js"></script>
-
-</html>
