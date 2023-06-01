@@ -23,9 +23,9 @@ var infoes = [
         time: '150분',
         distributer: '월트 디즈니 컴퍼니 코리아',
         director: '제임스 건',
-        director_img : '제임스건',
         actors: ['크리스 프랫', '조 샐다나', '데이브 바티스타'],
-        actors_img :['크리스 프랫','조 샐다나','데이트 바티스타'],
+        director_img : '제임스건.jpg',
+        actors_img :['크리스 프랫.jpg','조 샐다나.jpg','데이브 바티스타.jpg'],
         ratings: [
         '메타스코어 64 / 100',
         '평점 8.3 / 10(IMDb Top 250 151위)',
@@ -45,6 +45,8 @@ var infoes = [
         distributer: '월트 디즈니 컴퍼니 코리아',
         director: '롭 마샬',
         actors: ['할리 베일리', '멜리사 멕카시', '하비에르 바르뎀'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 59 / 100',
         '평점 7.0 / 10',
@@ -64,6 +66,8 @@ var infoes = [
         distributer: '에이비오엔터테이먼트',
         director: '이상용',
         actors: ['마동석', '이준혁', '아오키 무네타카'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 X',
         '평점 X',
@@ -83,6 +87,8 @@ var infoes = [
         distributer: '유니버셜 픽쳐스',
         director: '루이 르테리에',
         actors: ['빈 디젤', '존 시나', '미셸 로드리게즈'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 55 / 100',
         '평점 6.2 / 10',
@@ -102,6 +108,8 @@ var infoes = [
         distributer: '유니버셜 픽쳐스',
         director: '아론 호바스',
         actors: ['크리스 프랫', '안야 테일러조이', '찰리 데이'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 46 / 100',
         '평점 7.3 / 10',
@@ -121,6 +129,8 @@ var infoes = [
         distributer: '파라마운트 픽쳐스',
         director: '스티븐 케이플 주니어',
         actors: ['앤서니 라모스', '도미니크 피시백', '로런 발레스'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 X',
         '평점 X',
@@ -140,6 +150,8 @@ var infoes = [
         distributer: '㈜레드아이스 엔터테인먼트',
         director: '채드 스타헬스키',
         actors: ['키아누 리브스', '견자단', '빌 스카스가드'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 78 / 100',
         '평점 8.2 / 10',
@@ -159,6 +171,8 @@ var infoes = [
         distributer: 'CJ ENM',
         director: '하시모토 마사카즈',
         actors: ['코바야시 유미코', '나라하시 미키', '모리카와 토시유키'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 X',
         '평점 7.1 / 10',
@@ -178,6 +192,8 @@ var infoes = [
         distributer: '제이콤, 워터홀컴퍼니(주)',
         director: '김수정, 임경원',
         actors: ['박영남', '이인성', '최덕희'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],
         ratings: [
         '메타스코어 X',
         '평점 7.3 / 10',
@@ -197,6 +213,8 @@ var infoes = [
         distributer: '(주)디스테이션',
         director: '후지이 미치히토',
         actors: ['코마츠 나나', '사카구치 켄타로'],
+        director_img : 'human_default.png',
+        actors_img :['human_default.png','human_default.png','human_default.png'],  
         ratings: [
         '메타스코어 X',
         '평점 6.8 / 10',
@@ -224,6 +242,7 @@ var movieDistributer = document.getElementById('movie-distributer');
 var movieDirector = document.getElementById('movie-director');
 var movieIntro = document.getElementById('movie-intro');
 var movieRatings = document.getElementsByClassName('movie-rating');
+var movieDirector_Image = document.getElementById('director_img');
 
 // info 선택
 const info = infoes[movies[value.toString()]];
@@ -238,6 +257,7 @@ movieState.textContent = info.state;
 movieRunningTime.textContent = info.time;
 movieDistributer.textContent = info.distributer;
 movieDirector.textContent = info.director;
+movieDirector_Image.src = "../../img/" + info.director_img;
 movieIntro.textContent = info.intro;
 
 // 평점 변경
@@ -246,13 +266,13 @@ for(var i=0; i<4; i++){
 }
 
 // 배우 추가
-console.log(info.actors);
+console.log(info.actors_img);
 for(var i=0; i<info.actors.length; i++){
-    addActor(info.actors[i]);
+    addActor(info.actors[i], i);
 }
 
 // 배우 추가 함수
-function addActor(actor) {
+function addActor(actor,i) {
     // Outer div with class "people_card"
     var outerDiv = document.createElement("div");
     outerDiv.classList.add("people_card");
@@ -261,7 +281,7 @@ function addActor(actor) {
     var thumbDiv = document.createElement("div");
     thumbDiv.classList.add("thumb");
     var image = document.createElement("img");
-    image.src = "../../img/human_default.png";
+    image.src = "../../img/"+info.actors_img[i];
     image.alt = "사진";
     thumbDiv.appendChild(image);
   
