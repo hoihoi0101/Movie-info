@@ -114,9 +114,9 @@ li {
 
 #myGif {
     position: absolute;
-    left: 20%;
-    top: 10%;
-    width: 1280px;
+    left: 12%;
+    top: 8%;
+    width: 1600px;
     height: 850px;
     z-index: 10;
     display: none;

@@ -1,42 +1,57 @@
-var gifContainer1 = document.querySelector('.slideitem1'); //슬라이드 1번 객체화
-var gifContainer2 = document.querySelector('.slideitem2');  //슬라이드 2번 객체화
-var gifContainer3 = document.querySelector('.slideitem3');  //슬라이드 3번 객체화
-var gifContainer4 = document.querySelector('.slideitem4');  //슬라이드 4번 객체화
+var gifImage = document.getElementById('myGif');
+var slideItem1 = document.querySelector('.slideitem1');
+var slideItem2 = document.querySelector('.slideitem2');
+var slideItem3 = document.querySelector('.slideitem3');
+var slideItem4 = document.querySelector('.slideitem4');
 
-    var gifImage = document.getElementById('myGif');
+slideItem1.addEventListener('mouseenter', function() {
+  if (gifImage.src !== '../../video/가오갤.mp4') {
+    gifImage.src = '../../video/가오갤.mp4';
+  }
+  gifImage.style.display = 'block';
+  gifImage.muted=false;
+});
 
-    gifContainer1.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/galxy.gif"
-      gifImage.style.display = 'block';
-    });
+gifImage.addEventListener('mouseleave', function() {
+  gifImage.style.display = 'none';
+  gifImage.muted=true;
+});
 
-    gifContainer1.addEventListener('mouseleave', function() {
-      gifImage.style.display = 'none';
-    });
+slideItem2.addEventListener('mouseenter', function() {
+  if (gifImage.src !== '../../video/범죄도시3.mp4') {
+    gifImage.src = '../../video/범죄도시3.mp4';
+  }
+  gifImage.style.display = 'block';
+  gifImage.muted=false;
+});
 
-    gifContainer2.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/city.gif"
-      gifImage.style.display = 'block';
-    });
+gifImage.addEventListener('mouseleave', function() {
+  gifImage.style.display = 'none';
+  gifImage.muted=true;
+});
 
-    gifContainer2.addEventListener('mouseleave', function() {
-      gifImage.style.display = 'none';
-    });
+slideItem3.addEventListener('mouseenter', function() {
+  if (gifImage.src !== '../../video/미션 임파서블.mp4') {
+    gifImage.src = '../../video/미션 임파서블.mp4';
+  }
+  gifImage.style.display = 'block';
+  gifImage.muted=false;
+});
 
-    gifContainer3.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/mission.gif"
-      gifImage.style.display = 'block';
-    });
+gifImage.addEventListener('mouseleave', function() {
+  gifImage.style.display = 'none';
+  gifImage.muted=true;
+});
 
-    gifContainer3.addEventListener('mouseleave', function() {
-      gifImage.style.display = 'none';
-    });
+slideItem4.addEventListener('mouseenter', function() {
+  if (gifImage.src !== '../../video/분노의 질주.mp4') {
+    gifImage.src = '../../video/분노의 질주.mp4';
+  }
+  gifImage.style.display = 'block';
+  gifImage.muted=false;
+});
 
-    gifContainer4.addEventListener('mouseenter', function() {
-      gifImage.src = "../../video/speed.gif"
-      gifImage.style.display = 'block';
-    });
-
-    gifContainer4.addEventListener('mouseleave', function() {
-      gifImage.style.display = 'none';
-    });
+gifImage.addEventListener('mouseleave', function() {
+  gifImage.style.display = 'none';
+  gifImage.muted=true;
+});
