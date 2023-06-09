@@ -175,41 +175,42 @@ for(var i=0; i<info.actors.length; i++){
 
 // 배우 추가 함수
 function addActor(actor) {
-    // Outer div with class "people_card"
+
+    // "people_card" 클래스를 가진 외부 div 생성
     var outerDiv = document.createElement("div");
     outerDiv.classList.add("people_card");
-  
-    // Div with class "thumb" and inner image
+
+    // "thumb" 클래스를 가진 div와 그 안의 이미지 생성
     var thumbDiv = document.createElement("div");
     thumbDiv.classList.add("thumb");
     var image = document.createElement("img");
     image.src = "../../img/"+info.actors_img[i];
     image.alt = "사진";
     thumbDiv.appendChild(image);
-  
-    // Div with class "title_box"
+
+    // "title_box" 클래스를 가진 div 생성
     var titleDiv = document.createElement("div");
     titleDiv.classList.add("title_box");
-  
-    // Span with class "sub_name"
+
+    // "sub_name" 클래스를 가진 span 생성
     var subNameSpan = document.createElement("span");
     subNameSpan.classList.add("sub_name");
     subNameSpan.style.maxHeight = "4rem";
     subNameSpan.innerText = "배우";
-  
-    // Strong element with class "people_name"
+
+    // "people_name" 클래스를 가진 strong 요소 생성
     var strongElement = document.createElement("strong");
     strongElement.classList.add("people_name");
     strongElement.style.maxHeight = "4rem";
     strongElement.innerText = actor;
-  
-    // Append elements to their respective parents
+
+    // 각 요소를 상위 요소에 추가
     titleDiv.appendChild(subNameSpan);
     titleDiv.appendChild(strongElement);
     outerDiv.appendChild(thumbDiv);
     outerDiv.appendChild(titleDiv);
-  
-    // Get the target element and append the created card
+
+    // 해당 카드를 추가할 목표 요소 가져오기
     var targetElement = document.querySelector(".movie-actor");
     targetElement.appendChild(outerDiv);
 }
