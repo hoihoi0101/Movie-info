@@ -129,7 +129,6 @@
     // 현재 URL에서 쿼리 파라미터 값을 읽어옴
     var urlParams = new URLSearchParams(window.location.search);
     var value = urlParams.get('value');
-    console.log("value", value);
 
     $(document).ready(function () {
 
@@ -191,7 +190,7 @@
         function createReviewItem(name, ratingStars, content) {
             return $("<li>", { class: "review-item" })
                 .append($("<div>", { class: "name", text: name }))
-                .append($("<div>", { text: "★".repeat(ratingStars) })) // 별점
+                .append($("<div>", { text: "★".repeat(ratingStars) })) 
                 .append($("<div>", { class: "content", html: content }))
                 .append($("<br>"));
         }
@@ -214,7 +213,6 @@
             const ratingStars = ratingIndex;
             storedReviews.push({ name, ratingStars, content });
             saveReviewsToLocal(value, storedReviews);
-            console.log("value!!!", value);
             displayReviews();
         }
 
