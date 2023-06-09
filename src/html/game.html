@@ -95,10 +95,9 @@
       context.drawImage(characterImage, characterX, characterY, 60, 30);
 
 
-      //obstacle 생성하기
+      //장애물 생성하기
       updateObstacle();
 
-      //
       for (let i = 0; i < obstacles.length; i++) {
         let obstacle = obstacles[i];
         obstacle.x -= 4;

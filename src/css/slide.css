@@ -29,7 +29,7 @@ li {
     vertical-align: middle;
     background-color: rgb(46, 40, 40);
     width: 100%;
-    transition: transform 1s; /* 변경된 부분: all -> transform */
+    transition: transform 1s;
     border-radius: 10px;
 }
 
@@ -72,22 +72,22 @@ li {
 }
 
 #slide01:checked~.slidelist .slideitem {
-    transform: translateX(0); /* 변경된 부분: left -> transform */
+    transform: translateX(0); 
     border-radius: 10px;
 }
 
 #slide02:checked~.slidelist .slideitem {
-    transform: translateX(-100%); /* 변경된 부분: left -> transform */
+    transform: translateX(-100%); 
     border-radius: 10px;
 }
 
 #slide03:checked~.slidelist .slideitem {
-    transform: translateX(-200%); /* 변경된 부분: left -> transform */
+    transform: translateX(-200%); 
     border-radius: 10px;
 }
 
 #slide04:checked~.slidelist .slideitem {
-    transform: translateX(-300%); /* 변경된 부분: left -> transform */
+    transform: translateX(-300%); 
     border-radius: 10px;
 }
 

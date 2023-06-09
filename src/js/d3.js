@@ -1,6 +1,6 @@
 var dataSet = [5235552, 4112372, 2376642, 1924003, 1742594, 719807, 607620, 283889, 94994];
 
-// Select the SVG elements for the bar charts
+// 막대 차트에 사용할 SVG 요소 선택
 const svg1 = d3.select("#myGraph1");
 const svg2 = d3.select("#myGraph2");
 const svg3 = d3.select("#myGraph3");
@@ -11,11 +11,11 @@ const svg7 = d3.select("#myGraph7");
 const svg8 = d3.select("#myGraph8");
 const svg9 = d3.select("#myGraph9");
 
-// Define the width and height of the bar chart
+// 막대 차트의 너비 및 높이 정의
 const width = 500;
 const height = 20;
 
-// Append the rectangles
+// 직사각형 추가
 svg1.append("rect")
   .attr("x", 0)
   .attr("y", 0)
@@ -79,7 +79,7 @@ svg9.append("rect")
   .attr("height", height)
   .attr("fill", "blueviolet");
 
-// Add the numbers next to each bar
+// 각 막대 옆에 숫자 추가
 svg1.append("text")
   .text(Number(dataSet[0]).toLocaleString()+"명")
   .attr("x", dataSet[0] / 22500 + 5)
