@@ -86,3 +86,13 @@ a {
 .the_title :hover{
     font-weight: bold;
 }
+
+#search_btn{
+    width: 30px;
+    height: 30px;
+}
+
+#input_text{
+    width: 300px;
+    height: 30px;
+}
