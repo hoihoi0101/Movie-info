@@ -59,13 +59,11 @@
             <ul class="review-list">
                 <li class="review-item">
                     <div class="name">이름1</div>
-                    <div>★★★★☆</div>
-                    <div>리뷰 내용1</div>
+                    <div>응원 내용1</div>
                 </li><br>
                 <li class="review-item">
                     <div class="name">이름2</div>
-                    <div>★★★☆☆</div>
-                    <div>리뷰 내용2</div>
+                    <div>응원 내용2</div>
                 </li><br>
             </ul>
             <div class="comment-input">
@@ -86,6 +84,9 @@
 <div id="footers"></div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 <script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var value = urlParams.get('value');
+
     $(document).ready(function () {
 
         // 스크롤 관련 -----------------------------------------------------------------
@@ -129,40 +130,46 @@
             });
         });
 
-        // 리뷰 저장 ----------------------------------------------
-        function saveReviewsToLocal(reviews) {
-            localStorage.setItem('reviews', JSON.stringify(reviews));
+        // 응원 저장
+        function saveReviewsToLocal(value, reviews) {
+            const key = `reviews-${value}`;
+            localStorage.setItem(key, JSON.stringify(reviews));
         }
 
-        function getReviewsFromLocal() {
-            const storedReviews = localStorage.getItem('reviews');
+
+        // 응원 불러오기
+        function getReviewsFromLocal(value) {
+            const key = `reviews-${value}`;
+            const storedReviews = localStorage.getItem(key);
             return storedReviews ? JSON.parse(storedReviews) : [];
         }
 
+        //응원 생성
         function createReviewItem(name, ratingStars, content) {
             return $("<li>", { class: "review-item" })
                 .append($("<div>", { class: "name", text: name }))
-                .append($("<div>", { text: "★".repeat(ratingStars) })) // 별점
                 .append($("<div>", { html: content }))
-                .append($("<br>")); // 여기 수정
+                .append($("<br>"));
         }
 
         function displayReviews() {
             const reviewList = $(".review-list");
             reviewList.empty();
-            const storedReviews = getReviewsFromLocal();
+            const value = urlParams.get('value');
+            const storedReviews = getReviewsFromLocal(value);
 
             storedReviews.forEach(function (review) {
-                const newReview = createReviewItem(review.name, review.ratingStars, review.content); // 여기 수정
+                const newReview = createReviewItem(review.name, review.ratingStars, review.content);
                 reviewList.append(newReview);
             });
         }
 
-        function addReview(name, ratingIndex, content) {
-            const storedReviews = getReviewsFromLocal();
-            const ratingStars = ratingIndex ; // 여기 수정
+        // 리뷰 추가
+        function addReview(value, name, ratingIndex, content) {
+            const storedReviews = getReviewsFromLocal(value);
+            const ratingStars = ratingIndex;
             storedReviews.push({ name, ratingStars, content });
-            saveReviewsToLocal(storedReviews);
+            saveReviewsToLocal(value, storedReviews);
             displayReviews();
         }
 
@@ -170,18 +177,18 @@
             const nameInput = $(".name-input");
             const ratingIndex = checkboxes.filter((el) => el.checked).length;
             const contentTextarea = $("textarea");
+            const value = urlParams.get('value');
 
             const name = nameInput.val();
             const content = contentTextarea.val();
 
             if (name) {
                 if (ratingIndex >= 0) {
-                    addReview(name, ratingIndex, content);
+                    addReview(value,name, ratingIndex, content);
                     nameInput.val('');
                     checkboxes.forEach((checkbox) => { checkbox.checked = false; });
                     contentTextarea.val('');
-                } else {
-                    alert('별점을 선택하세요.');
+                
                 }
             } else {
                 alert('이름을 입력하세요.');
