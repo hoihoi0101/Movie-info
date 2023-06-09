@@ -4,6 +4,7 @@ var slideItem2 = document.querySelector('.slideitem2');
 var slideItem3 = document.querySelector('.slideitem3');
 var slideItem4 = document.querySelector('.slideitem4');
 
+//가오갤 호버시
 slideItem1.addEventListener('mouseenter', function() {
   if (gifImage.src !== '../../video/가오갤.mp4') {
     gifImage.src = '../../video/가오갤.mp4';
