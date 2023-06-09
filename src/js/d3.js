@@ -1,4 +1,4 @@
-var dataSet = [5224214, 3936456, 2328841, 1923415, 1622562, 688746, 545620, 487961, 73521];
+var dataSet = [5235552, 4112372, 2376642, 1924003, 1742594, 719807, 607620, 283889, 94994];
 
 // Select the SVG elements for the bar charts
 const svg1 = d3.select("#myGraph1");
