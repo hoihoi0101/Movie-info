@@ -1,4 +1,4 @@
-var apiKey = "apikey";
+var apiKey = "apiKey";
 var myPosition = { lat: 36.625, lng: 127.454 };
 var movies = [
     { name: "메가박스", address: "충청북도 청주시 서원구 1순환로 682 메가박스 청주사창점", url: "../../img/megabox.png", info: "1544-0070", lat: 36.632, lng: 127.460 },
@@ -28,7 +28,7 @@ function showMap() {
     // 맵 설정
     var mapOptions = {
         center: myPosition, // 내 위치
-        zoom: 13 // 지도 초기 줌 레벨
+        zoom: 15 // 지도 초기 줌 레벨
     };
     // 맵
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -43,12 +43,12 @@ function showMap() {
         // 인포 윈도우 생성
         const infowindow = new google.maps.InfoWindow({
             // 내용
-            content: `<img src=${url} alt="" width="120px" height="120px"><br>
-            <strong style="font-size: 15px">${name}</strong><br>
-            <span style="font-size:10px; width:120px; text-overflow: ellipsis; white-space:nowrap; overflow:hidden; display:block;">
-            <img src="../../img/marker.png" alt="" width="10px height="10px">${address}</span>
-            <span style="font-size:10px; width:120px; text-overflow: ellipsis; white-space:nowrap; overflow:hidden; display:block;">
-            <img src="../../img/call.png" alt="" width="10px height="10px">${info}</span>`
+            content: `<img src=${url} alt="" width="300px" height="300px"><br>
+            <strong style="font-size: 30px">${name}</strong><br>
+            <span style="font-size:20px; width:300px; text-overflow: ellipsis; white-space:nowrap; overflow:hidden; display:block;">
+            <img src="../../img/marker.png" alt="" width="20px height="20px">${address}</span>
+            <span style="font-size:20px; width:300px; text-overflow: ellipsis; white-space:nowrap; overflow:hidden; display:block;">
+            <img src="../../img/call.png" alt="" width="20px height="20px">${info}</span>`
         });
         // 마커 hover 이벤트 처리
         marker.addListener('mouseover', function() {
