@@ -2,7 +2,7 @@
 var movies = {
     '가디언즈오브갤럭시':'galaxy',
     '인어공주':'fish',
-    '범죄도시':'crime',
+    '범죄도시3':'crime',
     '분노의 질주':'speed',
     '슈퍼마리오':'mario',
     '트랜스포머':'robot',
