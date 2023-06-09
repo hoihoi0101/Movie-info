@@ -4,7 +4,7 @@
 
 #category-name{
     position: absolute;
-    top: 84%;
+    top: 81.5%;
     font-size:30px;
 }
 
@@ -16,7 +16,7 @@ hr{
 
 #now{
     position: absolute;
-    top: 84%;
+    top: 81.5%;
     right:  19%;
     font-size:30px;
     color: white;
@@ -26,7 +26,7 @@ hr{
 #future{
     position: absolute;
     right:  12%;
-    top: 84%;
+    top: 81.5%;
     font-size:30px;
     color: white;
 }
